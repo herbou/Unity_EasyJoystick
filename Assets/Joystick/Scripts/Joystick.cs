@@ -37,7 +37,11 @@ namespace EasyJoystick {
 
       private PointerEventData pointerEventData ;
       private Camera cam ;
-
+      
+      
+      private void OnEnable() {
+        OnPointerUp (null);
+      }
 
       private void Awake () {
          maxLength = (container.sizeDelta.x / 2f) - (handle.sizeDelta.x / 2f) - 5f ;
