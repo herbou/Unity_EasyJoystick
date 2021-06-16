@@ -100,7 +100,7 @@ Example :
 ```C#
 void Start (){
    joystick.OnJoystickUpAction += ()=>{
-      // this block of code executes once when you lift your finger.
+      // this block of code always executes once when you lift your finger.
    };
 }
 ```
