@@ -13,16 +13,14 @@
 Default player movement script :
 ```C#
 using UnityEngine ;
-using EasyJoystick ;
 
 public class Player : MonoBehaviour {
 
    [SerializeField] private float speed ;
-   [SerializeField] private Joystick joystick ;
 
    private void Update () {
-      float xMovement = joystick.Horizontal () ;
-      float zMovement = joystick.Vertical () ;
+      float xMovement = Input.GetAxis ("Horizontal") ;
+      float zMovement = Input.GetAxis ("Vertical") ;
 
       transform.position += new Vector3 (xMovement, 0f, zMovement) * speed * Time.deltaTime ;
    }
