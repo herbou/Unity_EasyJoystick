@@ -62,10 +62,10 @@ Then add a reference to the Joystick :
 ```C#
 public Joystick joystick ;
 ```
-### Properties :
+### 1. Properties :
 | Property  | Description |
 | ------------- | ------------- |
-| IsTouching  | ```bool```: Returns whether the joystick is held or not  |
+| IsTouching                  | ```bool```: Returns whether the joystick is held or not  |
 | ArrowKeysSimulationEnabled  | ```bool```: Set it to true if you want to simulate joystick with arrow keys. <br> you can set it through the inspector too (Joystick gameobject) : <br> <br> <img src="https://www.mediafire.com/convkey/09e9/slytda007g4j8ka7g.jpg" height="60" /> |
 
 Example :
@@ -83,14 +83,26 @@ void Update (){
 }
 ```
 
+### 2. Methods :
+| Method  | Description |
+| ------------- | ------------- |
+| Horizontal()  | ```float```: Returns horizontal movement between -1.0 and 1.0  |
+| Vertical()    | ```float```: Returns vertical movement between -1.0 and 1.0  |
 
-Get horizontal movement  :
+
+### 2. Events :
+| Event  | Description |
+| ------------- | ------------- |
+| OnJoystickDownAction  | Executes once when the joystick is touched  |
+| OnJoystickUpAction    | Executes once when you lift your finger.  |
+
+Example :
 ```C#
-joystick.Horizontal () // returns a float between -1.0 and 1.0
-```
-Get vertical movement  :
-```C#
-joystick.Vertical () // returns a float between -1.0 and 1.0
+void Start (){
+   joystick.OnJoystickUpAction = ()=>{
+      // this block of code executes once when you lift your finger.
+   };
+}
 ```
 
 
