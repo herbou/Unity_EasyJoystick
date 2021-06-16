@@ -2,13 +2,14 @@
 ### Video tutorial: [https://youtu.be/J3lZr6NRkiA](https://youtu.be/J3lZr6NRkiA)
 ![video thumbnail](https://img.youtube.com/vi/J3lZr6NRkiA/0.jpg)
 
-
+<br>
 # Documentation :
 ## ■ How to use ?
 1. Add ```EasyJoystick``` package to your project.
 2. Create a UI Canvas.
 3. Add the ```Joystick``` prefab (located at ```EasyJoystick/Prefabs```) to the Canvas.
 
+<br>
 ## ■ How to control player with the Joystick ?
 Default player movement script using keyboard arrow keys :
 ```C#
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour {
 
 }
 ```
+
+<br>
 The player movement using our Joystick 😊 :
 ```C#
 using UnityEngine ;
