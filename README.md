@@ -30,16 +30,16 @@ public class Player : MonoBehaviour {
 The player movement using our Joystick 😊 :
 ```C#
 using UnityEngine ;
-using EasyJoystick ;
+using EasyJoystick ; //line added
 
 public class Player : MonoBehaviour {
 
    [SerializeField] private float speed ;
-   [SerializeField] private Joystick joystick ;
+   [SerializeField] private Joystick joystick ; //line added
 
    private void Update () {
-      float xMovement = joystick.Horizontal () ;
-      float zMovement = joystick.Vertical () ;
+      float xMovement = joystick.Horizontal () ; //line changed
+      float zMovement = joystick.Vertical () ;   //line changed
 
       transform.position += new Vector3 (xMovement, 0f, zMovement) * speed * Time.deltaTime ;
    }
