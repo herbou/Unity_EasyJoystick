@@ -1,4 +1,4 @@
-# Unity Joystick input 😊 
+# Unity Joystick input
 ### Video tutorial: [https://youtu.be/J3lZr6NRkiA](https://youtu.be/J3lZr6NRkiA)
 ![video thumbnail](https://img.youtube.com/vi/J3lZr6NRkiA/0.jpg)
 
@@ -10,7 +10,7 @@
 3. Add the ```Joystick``` prefab (located at ```EasyJoystick/Prefabs```) to the Canvas.
 
 ## ■ How to control player with the Joystick ?
-Default player movement script :
+Default player movement script using keyboard arrow keys :
 ```C#
 using UnityEngine ;
 
@@ -21,6 +21,25 @@ public class Player : MonoBehaviour {
    private void Update () {
       float xMovement = Input.GetAxis ("Horizontal") ;
       float zMovement = Input.GetAxis ("Vertical") ;
+
+      transform.position += new Vector3 (xMovement, 0f, zMovement) * speed * Time.deltaTime ;
+   }
+
+}
+```
+The player movement using our Joystick 😊 :
+```C#
+using UnityEngine ;
+using EasyJoystick ;
+
+public class Player : MonoBehaviour {
+
+   [SerializeField] private float speed ;
+   [SerializeField] private Joystick joystick ;
+
+   private void Update () {
+      float xMovement = joystick.Horizontal () ;
+      float zMovement = joystick.Vertical () ;
 
       transform.position += new Vector3 (xMovement, 0f, zMovement) * speed * Time.deltaTime ;
    }
