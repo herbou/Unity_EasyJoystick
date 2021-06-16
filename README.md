@@ -46,6 +46,12 @@ public class Player : MonoBehaviour {
 
 }
 ```
+## ■ All the properties and methods :
+As we've seen above, we must add ```EasyJoystick``` namespace first :
+```C#
+using EasyJoystick ;
+```
+
 
 <br><br><br>
 ## ❤️ Donate
