@@ -99,7 +99,7 @@ void Update (){
 Example :
 ```C#
 void Start (){
-   joystick.OnJoystickUpAction = ()=>{
+   joystick.OnJoystickUpAction += ()=>{
       // this block of code executes once when you lift your finger.
    };
 }
