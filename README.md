@@ -66,7 +66,7 @@ public Joystick joystick ;
 | Property  | Description |
 | ------------- | ------------- |
 | IsTouching  | ```bool```: Returns whether the joystick is held or not  |
-| ArrowKeysSimulationEnabled  | ```bool```: Set it to true if you want to simulate joystick with arrow keys. <br> you can set it through the inspector too (Joystick gameobject) : <br> <img src="https://www.mediafire.com/convkey/09e9/slytda007g4j8ka7g.jpg" height="60" /> |
+| ArrowKeysSimulationEnabled  | ```bool```: Set it to true if you want to simulate joystick with arrow keys. <br> you can set it through the inspector too (Joystick gameobject) : <br> <br> <img src="https://www.mediafire.com/convkey/09e9/slytda007g4j8ka7g.jpg" height="60" /> |
 
 Example :
 ```C#
