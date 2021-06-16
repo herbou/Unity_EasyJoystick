@@ -62,6 +62,16 @@ Then add a reference to the Joystick :
 ```C#
 public Joystick joystick ;
 ```
+Get horizontal movement  :
+```C#
+joystick.Horizontal () // returns a float between -1.0 and 1.0
+```
+Get vertical movement  :
+```C#
+joystick.Vertical () // returns a float between -1.0 and 1.0
+```
+
+
 
 <br><br><br>
 ## ❤️ Donate
