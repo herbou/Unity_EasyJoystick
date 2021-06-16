@@ -58,7 +58,10 @@ As we've seen above, we must add ```EasyJoystick``` namespace first :
 ```C#
 using EasyJoystick ;
 ```
-
+Then add a reference to the Joystick :
+```C#
+public Joystick joystick ;
+```
 
 <br><br><br>
 ## ❤️ Donate
