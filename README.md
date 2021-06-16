@@ -53,7 +53,7 @@ public class Player : MonoBehaviour {
 
 <br /> 
 
-## ■ All the properties and methods :
+## ■ Scripting :
 As we've seen above, we must add ```EasyJoystick``` namespace first :
 ```C#
 using EasyJoystick ;
@@ -62,6 +62,27 @@ Then add a reference to the Joystick :
 ```C#
 public Joystick joystick ;
 ```
+### Properties :
+| Property  | Description |
+| ------------- | ------------- |
+| IsTouching  | ```bool```: Returns whether the joystick is held or not  |
+| ArrowKeysSimulationEnabled  | ```bool```: Set it to true if you want to simulate joystick with arrow keys (you can set it through the inspector too "Joystick gameobject" )   |
+Example :
+```C#
+// Use arrow keys too :
+void Start (){
+   joystick.ArrowKeysSimulationEnabled = true;
+}
+
+// IsTouching :
+void Update (){
+   if (joystick.IsTouching){
+      // ...
+   }
+}
+```
+
+
 Get horizontal movement  :
 ```C#
 joystick.Horizontal () // returns a float between -1.0 and 1.0
