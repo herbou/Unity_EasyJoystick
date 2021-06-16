@@ -5,6 +5,8 @@
 
 # Documentation :
 ## ■ How to use ?
+1. Add ```EasyJoystick``` package to your project.
+2. Add the ```Joystick``` prefab located at ```EasyJoystick/Prefabs```.
 
 <br><br><br>
 ## ❤️ Donate
