@@ -6,7 +6,29 @@
 # Documentation :
 ## ■ How to use ?
 1. Add ```EasyJoystick``` package to your project.
-2. Add the ```Joystick``` prefab located at ```EasyJoystick/Prefabs```.
+2. Create a UI Canvas.
+3. Add the ```Joystick``` prefab (located at ```EasyJoystick/Prefabs```) to the Canvas.
+
+## ■ How to control player with the Joystick ?
+Default player movement script :
+```C#
+using UnityEngine ;
+using EasyJoystick ;
+
+public class Player : MonoBehaviour {
+
+   [SerializeField] private float speed ;
+   [SerializeField] private Joystick joystick ;
+
+   private void Update () {
+      float xMovement = joystick.Horizontal () ;
+      float zMovement = joystick.Vertical () ;
+
+      transform.position += new Vector3 (xMovement, 0f, zMovement) * speed * Time.deltaTime ;
+   }
+
+}
+```
 
 <br><br><br>
 ## ❤️ Donate
